@@ -22,8 +22,8 @@ public class PrintPrimesTest {
 	// Test para el ejercicio 3: que visite arco del 2 al 10 pero sin pasar por el cuerpo del while
 	@Test
 	public void test1() {
-		PrintPrimes.main(new String[]{ "0" });
-		assertEquals("", outContent.toString());
+		PrintPrimes.main(new String[]{ "1" });
+		assertEquals("Prime: 2\n", outContent.toString());
 	}
 
 }
