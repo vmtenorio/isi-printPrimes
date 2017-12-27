@@ -38,7 +38,7 @@ public class PrintPrimes
          isPrime = true;
          for (int i = 0; i <= numPrimes-1; i++)
          {   // for each previous prime.
-            if (isDivisible (primes[0], curPrime))
+            if (isDivisible (primes[i], curPrime))
             {  // Found a divisor, curPrime is not prime.
                isPrime = false;
                break; // out of loop through primes.
