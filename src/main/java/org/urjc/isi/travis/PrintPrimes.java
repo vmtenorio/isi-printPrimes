@@ -36,7 +36,7 @@ public class PrintPrimes
       {
          curPrime++;  // next number to consider ...
          isPrime = true;
-         for (int i = 0; i <= numPrimes-1; i++)
+         for (int i = 0; i < numPrimes-1; i++)
          {   // for each previous prime.
             if (isDivisible (primes[i], curPrime))
             {  // Found a divisor, curPrime is not prime.
@@ -71,11 +71,16 @@ public class PrintPrimes
       try
       {
          integer = Integer.parseInt (argv[0]);
+         
       }
       catch (NumberFormatException e)
       {
          System.out.println ("Entry must be a integer, using 1.");
          integer = 1;
+      }
+      if (integer > 100) {
+    	  System.out.println("Cannot do more than 100 primes. Using 100");
+    	  integer = 100;
       }
    
       printPrimes (integer);
